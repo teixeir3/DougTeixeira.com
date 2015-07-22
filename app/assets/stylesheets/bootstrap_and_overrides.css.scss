@@ -229,6 +229,7 @@ figure.figure {
 }
 
 
+
 // Forms
 
 .form-group > input[type="submit"] {
@@ -396,6 +397,20 @@ ul, li { list-style-type: none; }
   -moz-transition:all 3s ease-in;
   -o-transition:all 3s ease-in;
   -webkit-transition:all 3s ease-in;
+}
+
+.icon-bar {
+  display: block;
+  background: #fff;
+  width: 24px;
+  height: 4px;
+  position: absolute;
+  left: 8px;
+  top: 11px;
+  transform-origin: 20px 4px;
+  -webkit-transform-origin: 20px 4px;
+  transition: transform 500ms ease, opacity 500ms ease;
+  -webkit-transition: transform 500ms ease, opacity 500ms ease;
 }
 
 
@@ -581,6 +596,13 @@ header {
   -webkit-transition:all 1s;
   -moz-transition:all 1s;
   -o-transition:all 1s;
+}
+
+// ####################### Asteroids Game ############################
+
+.asteroids-canvas {
+  margin: auto;
+  display: block;
 }
 
 // ####################### Snake Game ############################

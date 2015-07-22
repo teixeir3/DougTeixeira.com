@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.2'
+gem 'rails'
 
 # Use PostgresSQL as the database for Active Record
 gem 'pg'
@@ -9,7 +9,6 @@ gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 gem 'bootstrap-sass'
-gem 'bootstrap-generators', '~> 3.3.1'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -36,6 +35,9 @@ gem 'high_voltage'
 # gem "less-rails"
 # gem 'twitter-bootstrap-rails'
 
+#  My Gems:
+gem "asteroids", git: "git://github.com/teixeir3/Asteroids.git"
+
 
 gem 'paperclip', "~> 4.1"
 gem 'aws-sdk'
@@ -53,6 +55,7 @@ gem 'simple_form'
 gem "schema_to_scaffold"
 gem 'rename'
 gem 'meta-tags'
+gem 'url_formatter', git: "git://github.com/teixeir3/url_formatter.git"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
