@@ -61,7 +61,11 @@ class ProjectsController < ApplicationController
         format.html { redirect_to @project, notice: ['Project was successfully updated.'] }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
+        format.html { 
+          @pictures = [@project.pictures.build(permitted_params.project["pictures_attributes"])]
+          flash.now[:errors] = @pictures.errors.full_messages + @project.errors.full_messages
+          render :edit 
+        }
         format.json { render json: @project.errors.full_messages, status: :unprocessable_entity }
       end
     end
