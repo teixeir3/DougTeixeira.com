@@ -10,7 +10,7 @@
     <%= f.input :display %>
     <label>Pictures:</label>
     
-    <% if pictures.first.persisted? %>
+    <% if pictures.present? && pictures.first.persisted? %>
       <figure class="figure project-picture">
         <%= image_tag(pictures.first.image.url, alt: pictures.first.title) %>
       </figure>
