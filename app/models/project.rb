@@ -33,7 +33,7 @@ class Project < ActiveRecord::Base
     return true unless pictures.empty?
   end
   
-  accepts_nested_attributes_for :pictures
+  accepts_nested_attributes_for :pictures, reject_if: proc { |attributes| attributes['title'].blank? }
 
 
 end
