@@ -1,28 +1,44 @@
-<p>
-  <strong>Title:</strong>
-  <%= @project.title %>
-</p>
+<div class="row">
+  <div class="col-xs-12 row-padding project">
+   <p>
+     <strong>Title:</strong>
+     <%= @project.title %>
+   </p>
 
-<p>
-  <strong>Url:</strong>
-  <%= @project.url %>
-</p>
+   <p>
+     <strong>Url:</strong>
+     <%= @project.url %>
+   </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @project.description %>
-</p>
+   <p>
+     <strong>Description:</strong>
+     <%= @project.description %>
+   </p>
 
-<p>
-  <strong>Ord:</strong>
-  <%= @project.ord %>
-</p>
+   <p>
+     <strong>Ord:</strong>
+     <%= @project.ord %>
+   </p>
 
-<p>
-  <strong>Display:</strong>
-  <%= @project.display %>
-</p>
+   <p>
+     <strong>Display:</strong>
+     <%= @project.display %>
+   </p>
+   
+   
+    <% if @project.picture %>
+      <li class="list-item-group picture">
+        <figure class="figure">
+          <% #image_tag(project.pictures.first.image, alt: project.title) %>
+          <%= image_tag(@project.image.url, alt: @project.picture.title) %>
+          <figcaption>
+            <h3><% link_to "Edit #{@project.picture.title}", edit_picture_url(@project.picture), target: "" %></h3>
+          </figcaption>
+        </figure>
+      </li>
+    <% end %>
 
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+   <%= link_to 'Edit', edit_project_path(@project) %> |
+   <%= link_to 'Back', projects_path %>
+  </div>
+</div>

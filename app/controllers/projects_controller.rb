@@ -1,11 +1,11 @@
 class ProjectsController < ApplicationController
-  before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_action :set_project, only: [:new, :show, :edit, :update, :destroy]
   before_action :require_signed_in!, only: [:new, :edit, :create, :destroy]
 
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all
+    @projects = Project.includes(:pictures).all
   end
 
   # GET /projects/1
@@ -15,19 +15,20 @@ class ProjectsController < ApplicationController
 
   # GET /projects/new
   def new
-    @project = Project.new
-    @picture = @project.pictures.build
+    # @project = current_user.projects.build
+#     @pictures = [@project.pictures.build]
   end
 
   # GET /projects/1/edit
   def edit
+    
   end
 
   # POST /projects
   # POST /projects.json
   def create
     @project = Project.new(permitted_params.project)
-    @project.pictures.build(permitted_params.project[:pictures_attributes])
+    # @project.pictures.build(permitted_params.project[:pictures_attributes])
     
     respond_to do |format|
       if @project.save
@@ -45,10 +46,11 @@ class ProjectsController < ApplicationController
   # PATCH/PUT /projects/1.json
   def update
     respond_to do |format|
-      if @project.update(project_params)
+      if @project.update(permitted_params.project)
         format.html { redirect_to @project, notice: ['Project was successfully updated.'] }
         format.json { head :no_content }
       else
+        fail
         format.html { render action: 'edit' }
         format.json { render json: @project.errors.full_messages, status: :unprocessable_entity }
       end
@@ -68,13 +70,9 @@ class ProjectsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_project
-      @project = Project.find(params[:id])
-      @pictures = @project.pictures
-      @picture = @project.pictures.build
-    end
-
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def project_params
-      params.require(:project).permit(:title, :url, :description, :ord, :display)
+      @project = Project.includes(:pictures).where(id: params[:id]).first_or_initialize do |proj|
+        proj.user_id = current_user.id if current_user
+      end
+      @pictures = (@project.pictures.count == 0) ? [@project.pictures.build] : @project.pictures.order(:position)
     end
 end

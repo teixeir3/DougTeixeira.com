@@ -3,20 +3,23 @@
 # Table name: pictures
 #
 #  id                 :integer          not null, primary key
-#  title              :string(255)
+#  title              :string
 #  position           :integer
 #  display            :boolean          default(TRUE), not null
 #  imageable_id       :integer
-#  imageable_type     :string(255)
+#  imageable_type     :string
 #  created_at         :datetime
 #  updated_at         :datetime
-#  image_file_name    :string(255)
-#  image_content_type :string(255)
+#  image_file_name    :string
+#  image_content_type :string
 #  image_file_size    :integer
 #  image_updated_at   :datetime
 #
 
 class Picture < ActiveRecord::Base
+  
+  validates :title, :imageable, presence: true
+  
   belongs_to :imageable, polymorphic: true, inverse_of: :pictures
   
   has_attached_file :image,

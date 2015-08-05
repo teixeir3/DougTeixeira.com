@@ -215,6 +215,9 @@ figure.figure {
       backface-visibility: hidden;
       transition: all 0.5s;
       width: 100%;
+      min-height: 250px;
+      color: black;
+      text-align: center;
   }
 }
 .no-touch .projects figure:hover img,
@@ -355,7 +358,7 @@ body {
 
 .navbar-brand > img {
   position: relative;
-  top: -18px;
+  top: -12px;
   left: 0px;
 }
 

@@ -1,4 +1,4 @@
-<%= simple_form_for(project) do |f| %>
+<%= simple_form_for project, html: { multipart: true } do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
@@ -8,15 +8,25 @@
     <%= f.input :description %>
     <%= f.input :ord %>
     <%= f.input :display %>
-    <%= f.association :pictures %>
+    <label>Pictures:</label>
     
-    <%= f.simple_fields_for :pictures do |f2| %>
-      <%= f2.input :title %>
+    <% if pictures.first.persisted? %>
+      <figure class="figure picture">
+        <%= image_tag(pictures.first.image.url, alt: pictures.first.title) %>
+        <figcaption>
+          <h3><% link_to "Edit #{pictures.first.title}", edit_picture_url(pictures.first), target: "" %></h3>
+        </figcaption>
+      </figure>
+    <% end %>
+    
+    <% f.association :pictures, label_method: :title, value_method: :id, prompt: "Choose a picture:" %>
+    
+    <%= f.simple_fields_for :pictures, pictures do |f2| %>
+
+      <%= f2.input :title, placeholder: "New Title" %>
       <%= f2.input :position %>
       <%= f2.input :display %>
       <%= f2.input :image, as: :file, input_html: { class: "file-input" }%>
-      
-  
       
     <% end %>
   </div>

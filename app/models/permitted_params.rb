@@ -40,7 +40,7 @@ class PermittedParams < Struct.new(:params, :current_user)
   end
   
   def picture_attributes
-    @picture_attributes ||= [:title, :position, :display, :image]
+    @picture_attributes ||= [:id, :_destroy, :title, :position, :display, :image]
   end
   
   def project
@@ -48,7 +48,7 @@ class PermittedParams < Struct.new(:params, :current_user)
   end
   
   def project_attributes
-    @project_attributes ||= [:title, :url, :description, :ord, :display, :source_url, :pictures_attributes, :pictures, :picture]
+    @project_attributes ||= [:title, :url, :description, :ord, :display, :source_url, :pictures, :picture, :picture_ids, pictures_attributes: picture_attributes]
   end
   
   

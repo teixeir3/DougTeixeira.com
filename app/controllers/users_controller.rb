@@ -25,7 +25,7 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    @user = User.new(user_params)
+    @user = User.new(permitted_params.user)
 
     respond_to do |format|
       if @user.save
@@ -42,7 +42,7 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1.json
   def update
     respond_to do |format|
-      if @user.update(user_params)
+      if @user.update(permitted_params.user)
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
         format.json { head :no_content }
       else
@@ -69,7 +69,7 @@ class UsersController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def user_params
-      params.require(:user).permit(:email, :first_name, :last_name, :is_admin, :password_digest, :session_token, :password_reset_token, :password_reset_sent_at, :is_active, :activation_token, :uid, :access_token, :provider, :oauth_token, :oauth_expires_at, :fb_image_url, :display, :position, :title, :string, :bio, :phone, :work_phone, :home_phone, :mobile_phone, :fax, :timezone, :avatar_file_name, :avatar_content_type, :avatar_file_size, :avatar_updated_at)
-    end
+    # def user_params
+ #      params.require(:user).permit(:email, :first_name, :last_name, :is_admin, :password_digest, :session_token, :password_reset_token, :password_reset_sent_at, :is_active, :activation_token, :uid, :access_token, :provider, :oauth_token, :oauth_expires_at, :fb_image_url, :display, :position, :title, :string, :bio, :phone, :work_phone, :home_phone, :mobile_phone, :fax, :timezone, :avatar_file_name, :avatar_content_type, :avatar_file_size, :avatar_updated_at)
+ #    end
 end
