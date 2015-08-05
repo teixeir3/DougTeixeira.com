@@ -10,7 +10,7 @@ class ProjectsController < ApplicationController
     
     
     respond_to do |format|
-      format.html { render @projects }
+      format.html { render :index }
       format.json { render json: @projects }
     end
   end
