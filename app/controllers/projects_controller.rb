@@ -7,11 +7,21 @@ class ProjectsController < ApplicationController
   # GET /projects.json
   def index
     @projects = Project.includes(:pictures).all
+    
+    
+    respond_to do |format|
+      format.html { render @projects }
+      format.json { render json: @projects }
+    end
   end
 
   # GET /projects/1
   # GET /projects/1.json
   def show
+    respond_to do |format|
+      format.html { render @project }
+      format.json { render json: @project }
+    end
   end
 
   # GET /projects/new
