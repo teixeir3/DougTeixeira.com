@@ -11,11 +11,8 @@
     <label>Pictures:</label>
     
     <% if pictures.first.persisted? %>
-      <figure class="figure picture">
+      <figure class="figure project-picture">
         <%= image_tag(pictures.first.image.url, alt: pictures.first.title) %>
-        <figcaption>
-          <h3><% link_to "Edit #{pictures.first.title}", edit_picture_url(pictures.first), target: "" %></h3>
-        </figcaption>
       </figure>
     <% end %>
     

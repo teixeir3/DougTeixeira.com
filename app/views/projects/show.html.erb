@@ -27,15 +27,9 @@
    
    
     <% if @project.picture %>
-      <li class="list-item-group picture">
-        <figure class="figure">
-          <% #image_tag(project.pictures.first.image, alt: project.title) %>
-          <%= image_tag(@project.image.url, alt: @project.picture.title) %>
-          <figcaption>
-            <h3><% link_to "Edit #{@project.picture.title}", edit_picture_url(@project.picture), target: "" %></h3>
-          </figcaption>
-        </figure>
-      </li>
+      <figure class="figure project-picture">
+        <%= image_tag(@project.image.url, alt: @project.picture.title) %>
+      </figure>
     <% end %>
 
    <%= link_to 'Edit', edit_project_path(@project) %> |

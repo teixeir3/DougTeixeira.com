@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:new, :show, :edit, :update, :destroy]
+  before_action :set_project_pictures, only: [:new, :show, :edit]
   before_action :require_signed_in!, only: [:new, :edit, :create, :destroy]
 
   # GET /projects
@@ -50,7 +51,6 @@ class ProjectsController < ApplicationController
         format.html { redirect_to @project, notice: ['Project was successfully updated.'] }
         format.json { head :no_content }
       else
-        fail
         format.html { render action: 'edit' }
         format.json { render json: @project.errors.full_messages, status: :unprocessable_entity }
       end
@@ -73,6 +73,9 @@ class ProjectsController < ApplicationController
       @project = Project.includes(:pictures).where(id: params[:id]).first_or_initialize do |proj|
         proj.user_id = current_user.id if current_user
       end
+    end
+    
+    def set_project_pictures
       @pictures = (@project.pictures.count == 0) ? [@project.pictures.build] : @project.pictures.order(:position)
     end
 end
