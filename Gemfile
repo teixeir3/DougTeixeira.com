@@ -38,7 +38,7 @@ gem 'high_voltage'
 #  My Gems:
 gem "asteroids", git: "git://github.com/teixeir3/Asteroids.git"
 
-gem 'aws-sdk'
+gem 'aws-sdk-v1'
 gem 'paperclip'
 
 gem 'rails-gallery'
