@@ -38,7 +38,7 @@ class ProjectsController < ApplicationController
   # POST /projects
   # POST /projects.json
   def create
-    @project = Project.new(permitted_params.project)
+    @project = current_user.projects.build(permitted_params.project)
     # @project.pictures.build(permitted_params.project[:pictures_attributes])
     
     respond_to do |format|
