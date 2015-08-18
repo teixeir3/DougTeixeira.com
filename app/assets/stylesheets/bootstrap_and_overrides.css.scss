@@ -414,7 +414,7 @@ ul, li { list-style-type: none; }
 
   .icon-bar {
     width: 22px;
-    transition: all 0.2s;
+    transition: all 0.5s;
   }
   .top-bar {
     transform: rotate(45deg);
@@ -422,6 +422,9 @@ ul, li { list-style-type: none; }
   }
   .middle-bar {
     opacity: 0;
+    transition: all 0.2s;
+//    transform: rotate(-45deg);
+//    transform-origin: 37%;
   }
   .bottom-bar {
     transform: rotate(-45deg);
@@ -435,6 +438,7 @@ ul, li { list-style-type: none; }
   }
   .middle-bar {
     opacity: 1;
+//    transform: rotate(0);
   }
   .bottom-bar {
     transform: rotate(0);
