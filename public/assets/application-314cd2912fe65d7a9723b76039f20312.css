@@ -9422,8 +9422,8 @@ figure.figure img {
   z-index: 10;
   max-width: 100%;
   height: auto;
-  border: 1px solid darkgray;
   border-radius: 4px;
+  max-height: 300px;
 }
 /* line 155, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 figure.figure figcaption {
@@ -9499,47 +9499,50 @@ figure.figure span {
   backface-visibility: hidden;
   transition: all 0.5s;
   width: 100%;
+  min-height: 250px;
+  color: black;
+  text-align: center;
 }
 
-/* line 221, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 225, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .no-touch .projects figure:hover img,
 .projects figure:hover img {
   transform: rotateY(180deg);
 }
 
-/* line 227, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 231, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .no-touch .projects figure:hover figcaption,
 .projects figure:hover figcaption {
   transform: rotateY(0);
 }
 
-/* line 235, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 239, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .form-group > input[type="submit"] {
   width: 100%;
 }
 
-/* line 238, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 242, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .about_me {
   color: white;
   background-image: url("dt_bg_3_580x656.png");
   background-color: #29516D;
 }
-/* line 242, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 246, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .about_me .about-picture > img {
   width: 100%;
 }
 
-/* line 249, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 253, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .contact {
   color: white;
   background-image: url("dt_bg_2_580x656.png");
   background-color: #AA5839;
 }
-/* line 253, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 257, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .contact .list-group-link {
   padding: 0;
 }
-/* line 257, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 261, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .contact .list-group-item a {
   padding: 10px 15px;
   height: 100%;
@@ -9547,58 +9550,58 @@ figure.figure span {
   display: block;
   color: white;
 }
-/* line 264, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 268, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .contact .list-group-item:hover {
   background: #551700;
 }
 
-/* line 275, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 279, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .welcome .alert {
   margin-top: 60px;
 }
 
-/* line 281, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 285, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .ayos-logo > img:hover {
   opacity: .7;
 }
 
-/* line 286, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 290, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .social-links {
   margin: auto;
   width: 305px;
 }
-/* line 289, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 293, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .social-links li {
   padding-left: 10px;
   padding-right: 10px;
   display: block;
   float: left;
 }
-/* line 294, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 298, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .social-links li a {
   display: block;
 }
-/* line 299, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 303, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .social-links img:hover {
   opacity: 0.8;
 }
 
-/* line 306, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 310, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 footer .navbar {
   margin-bottom: 0px;
 }
 
-/* line 311, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 315, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #footer-container {
   width: auto;
 }
 
-/* line 318, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 322, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .dropdown-submenu {
   position: relative;
 }
 
-/* line 319, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 323, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .dropdown-submenu > .dropdown-menu {
   top: 0;
   left: 100%;
@@ -9609,12 +9612,12 @@ footer .navbar {
   border-radius: 0 6px 6px 6px;
 }
 
-/* line 320, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 324, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .dropdown-submenu:hover > .dropdown-menu {
   display: block;
 }
 
-/* line 321, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 325, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .dropdown-submenu > a:after {
   display: block;
   content: " ";
@@ -9629,17 +9632,17 @@ footer .navbar {
   margin-right: -10px;
 }
 
-/* line 322, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 326, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .dropdown-submenu:hover > a:after {
   border-left-color: #ffffff;
 }
 
-/* line 323, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 327, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .dropdown-submenu.pull-left {
   float: none;
 }
 
-/* line 323, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 327, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .dropdown-submenu.pull-left > .dropdown-menu {
   left: -100%;
   margin-left: 10px;
@@ -9648,27 +9651,27 @@ footer .navbar {
   border-radius: 6px 0 6px 6px;
 }
 
-/* line 325, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 329, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .inverse-dropdown {
   background-color: #222;
   border-color: #080808;
 }
-/* line 328, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 332, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .inverse-dropdown > li > a {
   color: #999;
 }
-/* line 330, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 334, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .inverse-dropdown > li > a:hover {
   color: #fff;
   background-color: #000;
   background-image: none;
 }
-/* line 336, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 340, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .inverse-dropdown > .divider {
   background-color: #000;
 }
 
-/* line 345, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 349, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 body {
   padding-top: 180px;
   overflow-x: hidden;
@@ -9678,52 +9681,52 @@ body {
   -o-transition: all 1s;
 }
 
-/* line 356, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 360, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .navbar-brand > img {
   position: relative;
-  top: -18px;
+  top: -12px;
   left: 0px;
 }
 
-/* line 362, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 366, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .navbar-inverse .navbar-nav > li > a {
   color: #03a159;
   font-weight: bold;
 }
 
-/* line 370, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 374, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #site-slogan {
   font-size: 15px;
   text-align: center;
 }
 
-/* line 375, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 379, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #logo {
   text-align: center;
   padding-bottom: 10px;
 }
 
-/* line 380, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 384, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #logo > a:hover, .copyright > a:hover {
   background: transparent;
 }
 
-/* line 384, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 388, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 a {
   text-decoration: none;
 }
 
-/* line 386, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 390, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 ul, li {
   list-style-type: none;
 }
 
-/* line 389, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 393, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #logo-nav {
   margin-bottom: 0px;
 }
 
-/* line 393, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 397, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .navbar-inverse {
   background-image: none;
   background-color: rgba(34, 34, 34, 0.9);
@@ -9733,22 +9736,49 @@ ul, li {
   -webkit-transition: all 3s ease-in;
 }
 
-/* line 402, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
-.icon-bar {
-  display: block;
-  background: #fff;
-  width: 24px;
-  height: 4px;
-  position: absolute;
-  left: 8px;
-  top: 11px;
-  transform-origin: 20px 4px;
-  -webkit-transform-origin: 20px 4px;
-  transition: transform 500ms ease, opacity 500ms ease;
-  -webkit-transition: transform 500ms ease, opacity 500ms ease;
+/* line 407, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+.navbar-toggle {
+  border: none;
+  background: transparent !important;
+}
+/* line 411, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+.navbar-toggle:hover {
+  background: transparent !important;
+}
+/* line 415, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+.navbar-toggle .icon-bar {
+  width: 22px;
+  transition: all 0.2s;
+}
+/* line 419, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+.navbar-toggle .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+/* line 423, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+.navbar-toggle .middle-bar {
+  opacity: 0;
+}
+/* line 426, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+.navbar-toggle .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
 }
 
-/* line 417, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 433, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+.navbar-toggle.collapsed .top-bar {
+  transform: rotate(0);
+}
+/* line 436, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+.navbar-toggle.collapsed .middle-bar {
+  opacity: 1;
+}
+/* line 439, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+.navbar-toggle.collapsed .bottom-bar {
+  transform: rotate(0);
+}
+
+/* line 446, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .main-nav {
   position: relative;
   transition: all 1s ease-in;
@@ -9758,12 +9788,12 @@ ul, li {
 }
 
 @media (max-width: 768px) {
-  /* line 430, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+  /* line 459, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
   .collapsed .navbar-brand-small {
     left: 0px;
   }
 
-  /* line 434, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+  /* line 463, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
   .navbar-brand-small {
     top: 0px;
     left: -90px;
@@ -9774,7 +9804,7 @@ ul, li {
     -o-transition: all 1700ms;
   }
 
-  /* line 446, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+  /* line 475, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
   .navbar-brand-big {
     top: -44px;
     display: none;
@@ -9786,22 +9816,22 @@ ul, li {
   }
 }
 @media (min-width: 768px) {
-  /* line 462, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+  /* line 491, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
   .dropdown-menu li:hover .sub-menu {
     visibility: visible;
   }
 
-  /* line 464, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+  /* line 493, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
   .dropdown:hover .dropdown-menu {
     display: block;
   }
 
-  /* line 467, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+  /* line 496, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
   .main-nav {
     left: -95px;
   }
 
-  /* line 470, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+  /* line 499, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
   .navbar-brand-small {
     top: -144px;
     position: relative;
@@ -9812,7 +9842,7 @@ ul, li {
     -o-transition: all 1s;
   }
 
-  /* line 481, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+  /* line 510, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
   .navbar-brand-big {
     top: 0px;
     position: relative;
@@ -9822,19 +9852,19 @@ ul, li {
     -o-transition: all 2s;
   }
 }
-/* line 491, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 520, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .sampleClass {
   float: left;
   display: none;
 }
 
 @media (min-width: 992px) {
-  /* line 500, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+  /* line 529, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
   .sampleClass {
     float: none;
   }
 
-  /* line 502, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+  /* line 531, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
   .main-content {
     transition: all 1s;
     -moz-transition: all 1s ease-in;
@@ -9843,7 +9873,7 @@ ul, li {
     transition: all 1s ease-in;
   }
 
-  /* line 510, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+  /* line 539, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
   .sidebar {
     left: 0px;
     position: relative;
@@ -9853,12 +9883,12 @@ ul, li {
     transition: all 5000ms ease-in;
   }
 }
-/* line 536, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 565, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .collapsed .navbar-inverse {
   box-shadow: rgba(0, 0, 0, 0.2) 3px 5px 5px;
   background-color: #222222;
 }
-/* line 540, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 569, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .collapsed .navbar-brand {
   top: 0px;
   transition: all 1s;
@@ -9866,23 +9896,23 @@ ul, li {
   -moz-transition: all 1s;
   -o-transition: all 1s;
 }
-/* line 547, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 576, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .collapsed .main-nav {
   left: 0px;
 }
-/* line 550, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 579, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .collapsed .header-container {
   height: 50px;
 }
-/* line 553, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 582, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .collapsed .header {
   top: -81px;
 }
-/* line 556, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 585, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .collapsed .navbar-brand-big {
   top: 0px;
 }
-/* line 559, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 588, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .collapsed #logo-nav {
   background: #03a159;
   border: none;
@@ -9892,12 +9922,12 @@ ul, li {
   -moz-transition: all 1s;
   -o-transition: all 1s;
 }
-/* line 568, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 597, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .collapsed #site-slogan {
   top: 16px;
 }
 
-/* line 576, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 605, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #site-slogan {
   position: relative;
   top: 0px;
@@ -9907,17 +9937,17 @@ ul, li {
   -o-transition: all 1.5s;
 }
 
-/* line 586, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 615, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .navbar-brand-big {
   top: -650px;
 }
 
-/* line 590, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 619, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .navbar {
   border-radius: 0;
 }
 
-/* line 594, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 623, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 header {
   transition: all 1s;
   -webkit-transition: all 1s;
@@ -9925,13 +9955,13 @@ header {
   -o-transition: all 1s;
 }
 
-/* line 603, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 632, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .asteroids-canvas {
   margin: auto;
   display: block;
 }
 
-/* line 611, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 640, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .grid {
   margin: 30px auto;
   width: 402px;
@@ -9939,7 +9969,7 @@ header {
   padding-left: 0;
 }
 
-/* line 618, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 647, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .grid > li {
   float: left;
   width: 20px;
@@ -9949,7 +9979,7 @@ header {
   cursor: pointer;
 }
 
-/* line 627, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 656, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .grid > .snake {
   z-index: 999;
   background: #03a159;
@@ -9957,14 +9987,14 @@ header {
   text-shadow: none;
 }
 
-/* line 637, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 666, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .grid > .apple {
   color: red;
   font-size: 18px;
   text-align: center;
   line-height: 22px;
 }
-/* line 642, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 671, /Users/Doug/Codes/DougTeixeira/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .grid > .apple:before {
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   content: "\f179";
