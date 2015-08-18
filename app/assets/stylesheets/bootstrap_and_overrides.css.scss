@@ -403,19 +403,44 @@ ul, li { list-style-type: none; }
   -webkit-transition:all 3s ease-in;
 }
 
-.icon-bar {
-  display: block;
-  background: #fff;
-  width: 24px;
-  height: 4px;
-  position: absolute;
-  left: 8px;
-  top: 11px;
-  transform-origin: 20px 4px;
-  -webkit-transform-origin: 20px 4px;
-  transition: transform 500ms ease, opacity 500ms ease;
-  -webkit-transition: transform 500ms ease, opacity 500ms ease;
+
+.navbar-toggle {
+  border: none;
+  background: transparent !important;
+
+  &:hover {
+    background: transparent !important;
+  }
+
+  .icon-bar {
+    width: 22px;
+    transition: all 0.2s;
+  }
+  .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+  }
+  .middle-bar {
+    opacity: 0;
+  }
+  .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+  }
 }
+
+.navbar-toggle.collapsed {
+  .top-bar {
+    transform: rotate(0);
+  }
+  .middle-bar {
+    opacity: 1;
+  }
+  .bottom-bar {
+    transform: rotate(0);
+  }
+}
+
 
 
 .main-nav {
