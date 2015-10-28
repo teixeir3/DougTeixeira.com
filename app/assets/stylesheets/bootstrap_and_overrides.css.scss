@@ -2,6 +2,8 @@
 $iconSpritePath: image-path('glyphicons-halflings.png');
 $iconWhiteSpritePath: image-path('glyphicons-halflings-white.png');
 
+//TODO Angkor Watt image background color: #292929
+
 //$navbarBackground:                            #555;
 //$navbarBackgroundHighlight:                   #888;
 //$navbarText:                                  #eee;
@@ -11,8 +13,9 @@ $brand-primary:                               #03a159;
 $link-color:                                  darken($brand-primary, 10%);
 $list-group-link-color:                       $link-color;
 //$btn-primary-bg:                              #03a159;
-$navbar-inverse-bg:                           rgba(34, 34, 34, 1);
-$navbar-inverse-bg-transparent:               rgba(34, 34, 34, 0.9);
+$navbar-inverse-bg:                           rgba(42, 41, 41, 1);
+$navbar-inverse-bg-transparent:               rgba(42, 41, 41, 0.9);
+
 $navbar-inverse-color:                        darken($brand-primary, 10%);
 $navbar-inverse-link-color:                   $navbar-inverse-color;
 
@@ -88,7 +91,7 @@ $font-size-base: 20px;
 }
 
 .background-image {
-//  background-size: cover;
+  background-size: cover;
   background-attachment: fixed;
 }
 
@@ -243,8 +246,30 @@ figure.figure {
   color: white;
   background-image: url("dt_bg_3_580x656.png");
   background-color: #29516D;
-  .about-picture > img {
-    width: 100%;
+  .about-picture {
+    & > img {
+      width: 100%;
+      border: 1px solid #29516D;
+    }
+    .shadow {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -moz-box-shadow:    inset 20px 20px 10px #29516D,
+                          inset -20px -20px 10px rgba(41, 81, 109, 1.00);
+      -webkit-box-shadow: inset 20px 20px 10px #29516D,
+                          inset -20px -20px 10px rgba(41, 81, 109, 1.00);
+      box-shadow:         inset 20px 20px 10px #29516D,
+                          inset -20px -20px 10px rgba(41, 81, 109, 1.00);
+      border-radius: 20px;
+      top: 0;
+      left: 0;
+    }  
+  }
+  .bio {
+    p {
+      text-indent: 50px;
+    }
   }
 //  color: $patient-portal-text-color;
   //text-shadow:-1px 0 $text-shadow, 0 1px $text-shadow, 1px 0 $text-shadow, 0 -1px $text-shadow;
@@ -269,15 +294,76 @@ figure.figure {
       background: #551700;
     }
   };
-//  color: $patient-portal-text-color;
-  //text-shadow:-1px 0 $text-shadow, 0 1px $text-shadow, 1px 0 $text-shadow, 0 -1px $text-shadow;
 }
 
-
-
 .welcome {
+  color: white;
   .alert {
     margin-top: 60px;
+  }
+}
+
+.welcome-page {
+  background-color: #292929;
+  img.welcome-spacer {
+    width: 100%;
+    display: block;
+    position: relative;
+    top: -144px;
+  }
+}
+.home-page {
+  background-image: url("angkor wat_5.png");
+  background-position-y: 0;
+  background-color: #292929;
+}
+
+.avatar {
+  margin: auto;
+  display: block;
+//  clip: rect(38px, 200px, 238px, 0px);
+//  position: absolute;
+//  left: 41%;
+}
+
+.img-circular{
+ width: 200px;
+ height: 200px;
+ background-image: url();
+ background-size: cover;
+ display: block;
+ border-radius: 100px;
+ -webkit-border-radius: 100px;
+ -moz-border-radius: 100px;
+}
+
+.overlay {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: -moz-radial-gradient(transparent 150px, rgba(0,0,0,1) 150px);
+  background: -webkit-radial-gradient(transparent 150px, rgba(0,0,0,1) 150px);
+  background: -ms-radial-gradient(transparent 150px, rgba(0,0,0,1) 150px);
+  background: -o-radial-gradient(transparent 150px, rgba(0,0,0,1) 150px);
+  pointer-events: none; /* send mouse events beneath this layer */
+}
+
+.circle-filter {
+  &:before {
+    content: "";
+    	display: block;
+    	position: absolute;
+    	top: 0;
+    	bottom: 0;
+    	left: 0;
+    	right: 0;
+    	background: rgba(0,255,255, 0.5);
+    	-moz-transition: background .3s linear;
+    	-webkit-transition: background .3s linear;
+    	-o-transition: background .3s linear;
+    	transition: background .3s linear;
   }
 }
 
@@ -288,20 +374,24 @@ figure.figure {
 }
 
 .social-links {
-  margin: auto;
-  width: 305px;
   li {
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 100%;
     display: block;
-    float: left;
     a {
       display: block;
     }
   }
-  
-  img:hover {
-    opacity: 0.8;
+  img{
+    transition:all 200ms ease-in;
+    -moz-transition:all 200ms ease-in;
+    -o-transition:all 200ms ease-in;
+    -webkit-transition:all 200ms ease-in;
+    display: block;
+    margin: auto;
+    &:hover {
+      zoom: 105%;
+      opacity: 0.7;
+    }
   }
 }
 
@@ -347,7 +437,6 @@ footer {
  
  
 body {
-  padding-top: 180px;
   overflow-x: hidden;
   transition:all 1s;
   -webkit-transition:all 1s;
@@ -444,8 +533,6 @@ ul, li { list-style-type: none; }
     transform: rotate(0);
   }
 }
-
-
 
 .main-nav {
   //top: -187px;
@@ -590,17 +677,17 @@ ul, li { list-style-type: none; }
     top: 0px;
   }
   #logo-nav {
-    background: $brand-primary;
-    border: none;
-    opacity: .9;
-    transition:all 1s;
-    -webkit-transition:all 1s;
-    -moz-transition:all 1s;
-    -o-transition:all 1s;
+  //  background: $brand-primary;
+//    border: none;
+//    opacity: .9;
+//    transition:all 1s;
+//    -webkit-transition:all 1s;
+//    -moz-transition:all 1s;
+//    -o-transition:all 1s;
   }
   #site-slogan {
 //    color: $brand-primary;
-    top: 16px;
+    top: 0px;
 
   }
   

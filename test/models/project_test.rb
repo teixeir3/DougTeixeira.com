@@ -11,6 +11,7 @@
 #  created_at  :datetime
 #  updated_at  :datetime
 #  source_url  :string
+#  user_id     :integer          not null
 #
 
 require 'test_helper'

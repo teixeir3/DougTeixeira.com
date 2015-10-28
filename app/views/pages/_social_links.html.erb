@@ -1,22 +1,37 @@
-<div class="clearfix social-links">
-  <ul class="list-group">
+<% @social_link_size = 50 %>
+
+<div class="col-xs-12 col-sm-offset-3 col-sm-6 social-links">
+  <% if @render_title %>
+    <h4 class="">Profiles</h4>
+  <% end %>
+  <ul class="list-group clearfix">
+    <div class="col-xs-3">
     <li class="list-group-item">
       <%= link_to "http://www.github.com/teixeir3", target: "_blank", alt: "Github", class: "github-link" do %>
-        <%= image_tag "github-round-icon.png", width: 80, height: 80 %>
+        <%= image_tag "github-round-icon.png", width: @social_link_size, height: @social_link_size %>
       <% end %>
     </li>
-  
-    <li class="list-group-item">
-      <%= link_to "https://www.linkedin.com/in/dougteixeira", target: "_blank", alt: "LinkedIn", class: "linkedin-link" do %>
-        <%= image_tag "linkedin-icon.png", width: 80, height: 80 %>
-      <% end %>
-    </li>
-  
-    <li class="list-group-item">
-     <%= link_to "https://www.tumblr.com/blog/teixeir3", target: "_blank" , alt: "Tumblr Blog", class: "tumblr-link" do %>
-       <%= image_tag "tumblr-icon.png", width: 80, height: 80 %>
-     <% end %>
-    </li>
-    </p>
+    </div>
+    <div class="col-xs-3">
+      <li class="list-group-item">
+        <%= link_to "https://www.linkedin.com/in/dougteixeira", target: "_blank", alt: "LinkedIn", class: "linkedin-link" do %>
+          <%= image_tag "linkedin-icon.png", width: @social_link_size, height: @social_link_size %>
+        <% end %>
+      </li>
+    </div>
+    <div class="col-xs-3">
+      <li class="list-group-item">
+       <%= link_to "https://www.tumblr.com/blog/teixeir3", target: "_blank" , alt: "Tumblr Blog", class: "tumblr-link" do %>
+         <%= image_tag "tumblr-icon.png", width: @social_link_size, height: @social_link_size %>
+       <% end %>
+      </li>
+    </div>
+    <div class="col-xs-3">
+      <li class="list-group-item">
+       <%= link_to "https://www.codeeval.com/profile/teixeir3/", target: "_blank" , alt: "CodeEval Profile", class: "code_eval-link" do %>
+         <%= image_tag "code_eval-icon.png", width: @social_link_size, height: @social_link_size %>
+       <% end %>
+      </li>
+    </div>
   </ul>
 </div>

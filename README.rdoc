@@ -9,3 +9,4 @@ My portfolio - :)
 * Add Demo feature for visiters
 * Add asteroids game
 * Add scrollspy to home page to update navs
+* Add processes rack app to view dougteixeira.com/processes. Reference => [Railscasts ep#222]:http://railscasts.com/episodes/222-rack-in-rails-3

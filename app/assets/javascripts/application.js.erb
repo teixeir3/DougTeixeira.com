@@ -17,7 +17,13 @@
 //= require bootstrap
 //= require animate-scroll
 //= require fileinput
-//= require asteroids_game
+//= require asteroids/keymaster
+//= require asteroids/inherits
+//= require asteroids/moving_object
+//= require asteroids/asteroid
+//= require asteroids/ship
+//= require asteroids/bullet
+//= require asteroids/game
 
 
 var setFilepickerKey = function() {
@@ -67,7 +73,6 @@ var addTime = function(id) {
 };
 
 // Fancy form show edit
-
 var editField = function (event) {
     event.preventDefault();
     var $currentTarget = $(event.currentTarget);
@@ -108,63 +113,22 @@ var rowFadeout = function() {
   };
   
 var collapseCheck = function() {
-  scrollCheck(53);
-  
-  if (scrollCheck(53)) {
-    addClasses({'body': 'collapsed'});
-  } else {
-    removeClasses({'body': 'collapsed'});
-  }
+  scrollCheck(400) ? removeClasses({'body': 'collapsed'}) : addClasses({'body': 'collapsed'});
 };
-
-var sidebarCheck = function() {
-  if (checkSize() && scrollCheck($(".sidebar").height() + $(".navbar-inverse").height())) {
-    $(".sidebar").fadeOut();
-    addClasses({".row": "main-content-full"});
-  } else if ($(".row").hasClass("main-content-full")) {
-    removeClasses({".row": "main-content-full"});
-    fadeInElement($(".sidebar"), 1000);
-  }
- 
+var scrollCheck = function(breakPoint) {
+  return ($(this).scrollTop() >= breakPoint) ? true : false;
 };
-
-// var transformMainContentCheck = function() {
-//   if (scrollCheck(($("header").height()+2))) {
-//     addClasses({".row": "main-content-full"});
-//   } else {
-//    removeClasses({".row": "main-content-full"});
-//   }
-// };
 
 var addClasses = function(classHash) {
   for (var key in classHash) {
     $(key).addClass(classHash[key]);
   }
 };
-
 var removeClasses = function(classHash) {
   for (var key in classHash) {
     $(key).removeClass(classHash[key]);
   }
 };
-// toggleHash is a hash matching pattern [{ "elem": "addClassName"}, { "elem": "removeClassName"}]
-var scrollCheck = function(breakPoint) {
-
-  if ($(this).scrollTop() >= breakPoint) {
-    return true;
-  } else {
-    return false;
-  }
-};
-
-var checkSize = function() {
-    if ($(".sampleClass").css("float") == "none" ){
-      return true;
-    } else {
-      return false;
-    }
-};
-
 
 window.spinner = {
   on: function(){
@@ -243,10 +207,7 @@ $(document).on('page:change', function() {
   setFilepickerKey();
   window.spinner.off();
   $(window).scroll(collapseCheck);
-  // $(window).scroll(sidebarCheck);
-  // $(window).resize(sidebarCheck);
 
-  
   fadeOutElement($('.errors'), 6000);
   fadeOutElement($('.notices'), 6000);
   
@@ -257,11 +218,7 @@ $(document).on('page:change', function() {
   
   $('.anchored').on("click", function(event) {
 
-
     var $el = $($(event.target).data("anchor"));
-
-   
-   
      
     if ($el.length > 0) {
       event.preventDefault(); 
@@ -270,15 +227,14 @@ $(document).on('page:change', function() {
 
   });
   
-  
   $('.deletable').bind('ajax:success', rowFadeout);
   
   $('.login').on("click", window.modal.show);
   
   $(".modal").on("click", function(event){
-
     $target = $(event.target);
 
+    //TODO Check the code below for correctness.
     if($target.is(".modal") || $target.is(".modal-close-button")){
       event.preventDefault();
       window.modal.hide();

@@ -11,6 +11,7 @@
 #  created_at  :datetime
 #  updated_at  :datetime
 #  source_url  :string
+#  user_id     :integer          not null
 #
 
 class Project < ActiveRecord::Base
@@ -25,15 +26,5 @@ class Project < ActiveRecord::Base
   )
   
   include Imageable
-  
-  delegate :image, to: :picture, allow_nil: true
-
-  
-  def picture?
-    return true unless pictures.empty?
-  end
-  
-  accepts_nested_attributes_for :pictures, reject_if: proc { |attributes| attributes['title'].blank? }
-
 
 end
