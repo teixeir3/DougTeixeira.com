@@ -396,12 +396,36 @@ figure.figure {
 }
 
 footer {
-  background-color: #29516D;
+  padding: 60px;
+  background-color: rgba(41, 41, 41, .2);
+  background-image: url("Yosemite_002_1_sat_up.jpg");
+  background-size: cover;
+ 
   .navbar {
     margin-bottom: 0px;
   }
 }
 
+.tint{
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(41, 41, 41, 0.5);
+    -moz-transition: background .3s linear;
+    -webkit-transition: background .3s linear;
+    -o-transition: background .3s linear;
+    transition: background .3s linear;
+    &:hover {
+      background: none;
+    }
+  }
+}
 #footer-container {
   width: auto;
 }
