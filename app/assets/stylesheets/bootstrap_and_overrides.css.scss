@@ -244,7 +244,7 @@ figure.figure {
 }
 .about_me {
   color: white;
-  background-image: url("dt_bg_3_580x656.png");
+  background-image: image-url("dt_bg_3_580x656.png");
   background-color: #29516D;
   .about-picture {
     & > img {
@@ -277,7 +277,7 @@ figure.figure {
 
 .contact {
   color: white;
-  background-image: url("dt_bg_2_580x656.png");
+  background-image: image-url("dt_bg_2_580x656.png");
   background-color: #AA5839;
   .list-group-link {
     padding: 0;
@@ -313,7 +313,7 @@ figure.figure {
   }
 }
 .home-page {
-  background-image: url("angkor wat_7.png");
+  background-image: url("angkor wat_8.png");
   background-position: center;
   background-color: #292929;
 }
@@ -329,7 +329,7 @@ figure.figure {
 .img-circular{
  width: 200px;
  height: 200px;
- background-image: url();
+// background-image: image-url();
  background-size: cover;
  display: block;
  border-radius: 100px;
@@ -398,7 +398,7 @@ figure.figure {
 footer {
   padding: 100px;
   background-color: rgba(41, 41, 41, .2);
-  background-image: url("Yosemite_002_1_sat_up.jpg");
+  background-image: image-url("Yosemite_002_1_sat_up.jpg");
   background-size: cover;
  
   .navbar {
