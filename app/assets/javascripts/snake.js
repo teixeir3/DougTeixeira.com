@@ -11,14 +11,11 @@
   };
 
   Snake.prototype.move = function() {
-
     var newCoord = this.segments[0].plus(this.dir);
 
     // move each segment
     this.segments.unshift(newCoord);
     this.segments.pop();
-
-
   };
 
   // Snake.prototype.moveBody = function() {
@@ -70,41 +67,51 @@
 
   var Board = SnakeGame.Board = function() {
     this.snake = new Snake();
-    this.apples = [new Coord(3,3)]; //TODO make more apples spawn
+    this.apples = spawnApple(3, 3); //TODO make more apples spawn
   };
 
   Board.DIM_X = 20;
   Board.DIM_Y = 20;
+  
+  // Randomly spawn an apple in an empty space
+  Board.prototype.spawnRandomApple = function() {
+    // generate a random coord
+    // add coord to apples if the spot is empty?
+  };
+  
+  // Returns true if snake occupies all the spaces
+  Board.prototype.gameOver = function() {
+    this.snake.segments.count < Board.numSpaces();
+  };
+  
+  Board.prototype.numSpaces =  function() {
+    return Board.DIM_X * Board.DIM_Y
+  };
 
   Board.prototype.growMySnake = function(newCoord) {
-
     this.snake.segments.push(newCoord);
-
-
-  }
+  };
 
   Board.prototype.render = function() {
-
-
     var emptyGrid = _.times(Board.DIM_X, function (i) {
       return _.times(Board.DIM_Y, function (j) {
         return ".";
       });
     });
 
-
     var filledGrid = this.populate(emptyGrid);
     return filledGrid;
 
   };
   
+  // Returns true if coordinate is on the board
   Board.prototype.validCoord = function(coord) {
     if (coord.x < 0 || coord.x > this.DIM_X || coord.y < 0 || coord.y > DIM_Y) {
       return false;
     } 
     
     return true;
-  }
+  };
 
   Board.prototype.populate = function(grid) {
 

@@ -7,8 +7,12 @@ gem 'rails'
 gem 'pg'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails'
 gem 'bootstrap-sass'
+
+# Use ECMAScript6 / ECMA 2015
+gem 'sprockets', '>= 3.0.0'
+gem 'sprockets-es6'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
