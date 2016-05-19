@@ -1,13 +1,22 @@
-
-
-(function() {
-  var SnakeGame = window.SnakeGame = (window.SnakeGame || {});
+(function(root) {
+  var SnakeGame = root.SnakeGame = (root.SnakeGame || {});
 
   var Snake = SnakeGame.Snake = function() {
     this.dir = "E";
     this.segments = [new Coord(6,6), new Coord(6,7)];
 
 
+  };
+	
+  Snake.prototype.isOccupying = function (array) {
+    var result = false;
+    this.segments.forEach(function (segment) {
+      if (segment.i === array[0] && segment.j === array[1]) {
+        result = true;
+        return result;
+      }
+    });
+    return result;
   };
 
   Snake.prototype.move = function() {
@@ -64,10 +73,32 @@
   // }
 
   Snake.DIRS = ["N", "E", "S", "W"];
+	
+  var Apple = SnakeGame.Apple = function (board) {
+    this.board = board;
+    this.replace();
+  };
 
-  var Board = SnakeGame.Board = function() {
+  Apple.prototype.replace = function () {
+    var x = Math.floor(Math.random() * this.board.dim);
+    var y = Math.floor(Math.random() * this.board.dim);
+
+    // Don't place an apple where there is a snake
+    while (this.board.snake.isOccupying([x, y])) {
+      x = Math.floor(Math.random() * this.board.dim);
+      y = Math.floor(Math.random() * this.board.dim);
+			console.log("In while");
+    };
+		console.log("x: " + x);
+		console.log("y: " + y);
+
+    this.position = new Coord(x,y);
+  }
+
+  var Board = SnakeGame.Board = function(dim) {
+		this.dim = dim;
     this.snake = new Snake();
-    this.apples = spawnApple(3, 3); //TODO make more apples spawn
+    this.apples = [new Apple(this)];//spawnApple(3, 3); //TODO make more apples spawn
   };
 
   Board.DIM_X = 20;
@@ -125,4 +156,4 @@
 
     return grid;
   };
-})();
+})(this);

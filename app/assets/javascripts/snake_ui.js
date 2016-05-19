@@ -1,9 +1,9 @@
 //= require snake
 
-(function() {
-  var UI = window.SnakeUI = (window.SnakeUI || {});
+(function(root) {
+  var SnakeUI = root.SnakeUI = (root.SnakeUI || {});
 
-  var View = UI.View = function(htmlEl, max_x, max_y) {
+  var View = SnakeUI.View = function(htmlEl, max_x, max_y) {
     this.$el = htmlEl;
     this.length = max_x;
     this.width = max_y;
@@ -66,8 +66,8 @@
 
 
     this.board.apples.forEach(function(apple) {
-      var x = apple.x;
-      var y = apple.y;
+      var x = apple.position.x;
+      var y = apple.position.y;
 
       var index = (y * that.width) + x + 1;
       that.$el.find('li:nth-child(' + index + ')').addClass('apple');
@@ -92,7 +92,9 @@
 
   View.prototype.step = function() {
     //stash in variable here.
+		console.log("In step view#step");
     var cleanSnakeArr = this.cleanUpSnake();
+
     var removeIndex = cleanSnakeArr[1];
     var removeCoord = cleanSnakeArr[0];
 
@@ -100,9 +102,11 @@
 
     var that = this;
     var shouldRemoveIndex = true;
+		console.log("line 100");
     this.board.apples.forEach(function(apple) {
       if (lookForApple.equals(apple)) {
         var index = (apple.y * that.width) + apple.x + 1;
+				console.log("line 107");
         that.$el.find('li:nth-child(' + index + ')').removeClass('apple');
         that.board.apples.splice(that.board.apples.indexOf(apple), 1);
         that.board.growMySnake(removeCoord);
@@ -111,13 +115,18 @@
     })
 
     this.board.snake.move();
-
+		console.log("line 118");
     if (shouldRemoveIndex) {
+			console.log("line 120");
       this.$el.find('li:nth-child(' + removeIndex + ')').removeClass('snake');
+			console.log("line 121");
     }
 
     //clean up here
+		console.log("line 126");
     this.render();
+		
+		console.log("line 127");
 
   }
 
@@ -125,14 +134,11 @@
   View.prototype.start = function() {
     this.buildGrid();
     
-    this.board = new window.SnakeGame.Board();
+    this.board = new SnakeGame.Board(20);
 
     var that = this;
     $(function() {            //handleKeyEvent(event).bind(this)
-      $(document).on('keydown', handleKeyEvent.bind(that)
-
-
-    );
+      $(document).on('keydown', handleKeyEvent.bind(that));
     });
 
     //interval with #step.
@@ -145,4 +151,4 @@
 
 
 
-})();
+})(this);
