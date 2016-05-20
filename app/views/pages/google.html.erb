@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <%= stylesheet_link_tag "google" %>
+    
+  <title>Google</title>
+</head>
+<body>
+
+<header>
+  <nav class="group">
+    <ul class="group links">
+      <li><a id="name" href="#">Douglas</a></li>
+      <li><a href="#">Gmail</a></li>
+      <li><a href="#">Images</a></li>
+      <li><span class="icon-grid"></span></li>
+      <li class="alert-icon"><span class=""></span></li>
+      <li class="user-photo"><a href="#"></a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <figure>
+    <%= image_tag("google.png", class: "logo", alt: "Google")%>
+    <div class="share-container">
+      <img class="share" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAoklEQVR42mNISzvDQAZ2AOKZQPwAimdCxeBqyDX0DBD/R8NnkA0nx+CZWAyF4ZmUGPwAj8EPBp3BzkB8mdSgwBfTMkC8EsmAW8RGHq6YPgu14DOUD6IrgNiF2OSGL6ZheDUQyxEbbMREyCcgdiU1kkmKaXIMxhcUlylxMa7Iu0VpGONKbqDYL6ckVRDCZKdjmua84VkI0bQ8plkNQrM6jygMAKHTqWKK435AAAAAAElFTkSuQmCC" border="0" height="22" width="22">
+    </div>
+  </figure>
+
+  <form>
+
+    <div class="search-bar">
+      <input type="text" value="" autofocus>
+
+      <div class="voice">
+        <span class="voice-icon"></span>
+        <em>Search by voice</em>
+      </div>
+    </div>
+
+    <div class="search-buttons">
+      <button>Google Search</button>
+      <button class="search-buttons-lucky">
+        <strong>
+          <span>I'm Feeling Lucky</span>
+          <span>I'm Feeling Hungry</span>
+          <span>I'm Feeling Puzzled</span>
+          <span>I'm Feeling Trendy</span>
+          <span>I'm Feeling Stellar</span>
+          <span>I'm Feeling Playful</span>
+        </strong>
+      </button>
+    </div>
+
+  </form>
+
+</main>
+
+<footer class="group">
+  <ul class="footer-left group">
+    <li><a href="#">Advertising</a></li>
+    <li><a href="#">Business</a></li>
+    <li><a href="#">About</a></li>
+  </ul>
+
+  <ul class="footer-right group">
+    <li><a href="#">Privacy &amp; Terms</a></li>
+    <li><a href="#">Settings</a></li>
+  </ul>
+</footer>
+
+</body>
+</html>

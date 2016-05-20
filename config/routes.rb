@@ -16,7 +16,7 @@ DougTeixeira::Application.routes.draw do
   resources :pictures
   resources :contact_mes, only: [:new, :create]
   
-  
+  get 'google', to: 'pages#google'
   get 'session', to: redirect('/')
   get 'auth/:provider/callback', to: 'sessions#update_facebook_auth'
   get 'auth/failure', to: redirect('/')

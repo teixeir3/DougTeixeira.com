@@ -92,7 +92,6 @@
 
   View.prototype.step = function() {
     //stash in variable here.
-		console.log("In step view#step");
     var cleanSnakeArr = this.cleanUpSnake();
 
     var removeIndex = cleanSnakeArr[1];
@@ -102,11 +101,11 @@
 
     var that = this;
     var shouldRemoveIndex = true;
-		console.log("line 100");
+
     this.board.apples.forEach(function(apple) {
       if (lookForApple.equals(apple)) {
         var index = (apple.y * that.width) + apple.x + 1;
-				console.log("line 107");
+
         that.$el.find('li:nth-child(' + index + ')').removeClass('apple');
         that.board.apples.splice(that.board.apples.indexOf(apple), 1);
         that.board.growMySnake(removeCoord);
@@ -115,18 +114,12 @@
     })
 
     this.board.snake.move();
-		console.log("line 118");
     if (shouldRemoveIndex) {
-			console.log("line 120");
       this.$el.find('li:nth-child(' + removeIndex + ')').removeClass('snake');
-			console.log("line 121");
     }
 
     //clean up here
-		console.log("line 126");
     this.render();
-		
-		console.log("line 127");
 
   }
 

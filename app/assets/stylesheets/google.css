@@ -1,0 +1,362 @@
+/* RESET */
+
+html, body, nav, ul, li, div,
+em, span, main, img, form, button,
+header, footer, figure, a, strong,
+span, input[type="text"] {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  text-decoration: inherit;
+  color: inherit;
+  background: transparent;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  float: left;
+}
+
+input[type="text"] {
+  -webkit-appearance: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* UTILS */
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* BODY */
+
+html, body {
+  position: relative;
+  height: 100%;
+  min-height: 475px;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 13px;
+  color: #404040;
+}
+
+/* NAV */
+
+nav {
+  padding: 18px 30px;
+}
+
+nav > ul {
+  float: right;
+}
+
+nav > ul > li {
+  float: left;
+}
+
+nav > ul > li > a {
+  display: block;
+  padding: 0 0 0 15px;
+}
+
+.icon-grid {
+  display: block;
+  position: relative;
+  background: #777;
+  margin: 5px 7px 0 25px;
+  width: 16px;
+  height: 16px;
+}
+
+.icon-grid:hover {
+  background: #333;
+}
+
+.icon-grid:after,
+.icon-grid:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 2px solid #fff;
+}
+
+.icon-grid:before {
+  top: 0;
+  left: 4px;
+  width: 4px;
+  height: 16px;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.icon-grid:after {
+  top: 4px;
+  left: 0;
+  width: 16px;
+  height: 4px;
+  border-left: 0;
+  border-right: 0;
+}
+
+.user-dropdown {
+
+}
+
+.user-dropdown > a:after {
+  content: " ▾";
+}
+
+/* MAIN */
+
+main {
+  padding: 133px 0 0 0;
+}
+
+figure {
+  margin: auto;
+  padding: 0 0 23px 0;
+  height: 95px;
+  width: 269px;
+}
+
+form {
+
+}
+
+.search-bar {
+  position: relative;
+  margin: auto;
+  max-width: 484px;
+  height: 40px;
+}
+
+.search-bar > input {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  font-size: 16px;
+  height: 40px;
+  font-weight: bold;
+}
+
+.search-bar > input:hover {
+  border-color: #bbb;
+}
+
+.search-bar > input:focus {
+  border-color: #06f;
+}
+
+.search-bar > .voice {
+  position: absolute;
+  top: 9px;
+  right: 12px;
+  height: 23px;
+  width: 17px;
+  cursor: pointer;
+}
+
+.search-bar > .voice > .voice-icon {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACrElEQVR42u2Xz2sTQRSAX8VSb1K8iNqKooJH2Ux6Ksn+iPQqxZMIehJB0do/IMhmQWsvHr2KSEGk0tSLIoWIYNUKij20F2/N7iaUZnYT0kYzzhMKs0HDJiTdLcwHDwKZSd63781LBiQSSW9JZdkhzfKm1Rz9mjZp/W9YdEU3vXv4HsQZ40FtNG36q5rls//Ej4tmbSS2T15Mvp3ExOPmEMQNbBtMMEyoljcFcQN7PqyAlqNfIG7gYQ0tYNIaxA1MrJPY3wImbUqBKAXSFv0tBSIVMOkvKRDtGKWN/T6FdqRAxFNoWwpEPIXqUqBT6ALU/UVgu8GW4GD3f6f9TRDYNJTDrk7YbtiqUumHwIYoUJuHERDAS0r4CvgFECgbY+cFAR7KT+g1POmCKFDNw6WggHc3fBtVb4CAoyauBgXIG+g1Xh5mRAGah6cggBd11fK/h7lOprIs0H6uRl6KAo5O7kOv4QmPiwJ4Jqqv4FiwCtXjvD2+tRmfK6kZ/ygI2HritK0rDVGgrClJ6DWMwYC/AGuCBMYcIC2V0CzvjmbRz3j3xUjn6CfeYreUJ2wQkGD75INPX1mFfsEFrrcIYCvdhC4paWQakxajpJMr0C9YFg54i7AsClRmh9/xnr0NHcInzZStk2aLwAcGMAD9pPIazvFKVDD5rdnhJeHLX5RTyRPQHpz5o66emMc9wdlPtvA8wF7Aq2BUHh1525qEo5JtR1WeOXpickO9cJIpyuD6xJmhYiZ5ytWSl3mlnuOaf+2zDaLDXmJrSgZ/MYVEugo+gSh+FkSBa4yd5Ul87DZ5XpFl/AyIEjzYjkau8WqshU2cr13HPbgX4gJOD97n465GZlyVvC9mSKloKI2iTnbwNT+gBX54H+IaXAtxJzE3ycSAFqSAFJACUkAikXD+AHj5/wx2o5osAAAAAElFTkSuQmCC) no-repeat -3px 0;
+  background-size: 24px 24px;
+  display: inline-block;
+  width: 17px;
+  height: 23px;
+  verticle-align: middle;
+}
+
+
+
+.search-bar > .voice:hover > .voice-icon {
+  opacity: 0.8;
+}
+
+.search-bar > .voice > em {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: -44px;
+  background: #333;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 7px 10px;
+  white-space: nowrap;
+  border: 1px solid #fff;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+}
+
+.search-bar > .voice:hover > em {
+  display: block;
+}
+
+.search-bar > .voice > em:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  margin-left: -7px;
+  border-top: 0;
+  border-bottom: 7px solid #333;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+}
+
+.search-buttons {
+  padding: 20px;
+  text-align: center;
+}
+
+.search-buttons > button {
+  height: 36px;
+  margin: 0 7px;
+  border: 1px solid #f5f5f5;
+  font-size: 13px;
+  background: #f5f5f5;
+  font-weight: bold;
+  padding: 7px 8px;
+  border-radius: 2px;
+  cursor: pointer;
+  color: #757575;
+  width: 126px;
+}
+
+.search-buttons > button:hover {
+  border-color: #c6c6c6;
+  color: #222;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.15);
+}
+
+.search-buttons > .search-buttons-lucky {
+  display: inline-block;
+  padding: 0 5px;
+/*    height: 29px;*/
+  vertical-align: middle;
+  overflow: hidden;
+  width: 143px;
+}
+
+.search-buttons-lucky > strong {
+  position: relative;
+  top: 3px;
+  left: 0;
+}
+
+.search-buttons-lucky:hover > strong {
+  position: relative;
+  top: -132px;
+  left: 0;
+  transition: top 1s;
+}
+
+.search-buttons-lucky > strong > span {
+  display: block;
+  padding: 7px 0;
+}
+
+/* FOOTER */
+
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  border-top: 1px solid #e4e4e4;
+  background: #f2f2f2;
+}
+
+footer > .footer-left {
+  float: left;
+}
+
+footer > .footer-right {
+  float: right;
+}
+
+footer > ul {
+  padding: 0 15px;
+}
+
+footer > ul > li {
+  float: left;
+  padding: 12px 15px 13px 15px;
+}
+
+footer > ul > li > a {
+  color: #666;
+}
+
+#name {
+  opacity: .55;
+  font-size: 13px;
+}
+
+.links a {
+  opacity: .85;
+  display: inline-block;
+  line-height: 24px;
+  outline: none;
+  vertical-align: middle;
+}
+
+.links li {
+  padding-left: 15px;
+}
+
+.alert-icon {
+  padding-top: 4px;
+}
+
+.alert-icon > span {
+  background-image: url('http://ssl.gstatic.com/gb/images/i1_1967ca6a.png');
+  color: white;
+  background-position: -194px -21px;
+  background-color: rgba(0,0,0,.55);
+  height: 20px;
+  width: 20px;
+  display: block;
+  border-radius: 12px;
+}
+
+.alert-icon > span:hover {
+  background-color: rgba(0,0,0,.85);
+}
+.user-photo a {
+  background-image: url(http://lh3.googleusercontent.com/-pcJVhp8_OQ4/AAAAAAAAAAI/AAAAAAAAAAA/ADhl2yokxoCz0UcV7GHvTB2W-reyOCphZg/s32-c-mo/photo.jpg);
+  height: 30px;
+  width: 30px;
+  border-radius: 14px;
+  padding: 0px;
+  display: block;
+}
+
+.share {
+  height: 22px;
+  position: absolute;
+  width: 22px;
+  left: 2px;
+  top: 2px;
+}
+
+.share-container {
+  position: relative;
+  display: block;
+  float: left;
+  top: 64px;
+}

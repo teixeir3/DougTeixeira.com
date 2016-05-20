@@ -62,6 +62,7 @@ gem "schema_to_scaffold"
 gem 'rename'
 gem 'meta-tags'
 gem 'url_formatter', git: "git://github.com/teixeir3/url_formatter.git"
+gem 'faker'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
