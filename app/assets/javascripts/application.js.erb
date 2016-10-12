@@ -197,8 +197,8 @@ $(document).on('page:fetch', function() {
   window.spinner.on();
 });
 
-// Bind event listeners for TurboLinks
-$(document).on('page:change', function() {
+var ready;
+ready = function() {
   setFilepickerKey();
   window.spinner.off();
   $(window).scroll(collapseCheck);
@@ -235,4 +235,10 @@ $(document).on('page:change', function() {
       window.modal.hide();
     }
   });
-});
+
+};
+
+$(document).ready(ready);
+$(document).on('page:load', ready);
+// Bind event listeners for TurboLinks
+$(document).on('page:change', ready);
