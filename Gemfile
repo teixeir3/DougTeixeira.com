@@ -42,9 +42,11 @@ gem 'high_voltage'
 # gem 'twitter-bootstrap-rails'
 
 #  My Gems:
+# gem 'faker'
 gem "asteroids", git: "git://github.com/teixeir3/Asteroids.git"
 
-gem 'aws-sdk-v1'
+# gem 'aws-sdk-v1'
+gem 'aws-sdk', '~> 2'
 gem 'paperclip'
 
 gem 'rails-gallery'
@@ -62,7 +64,6 @@ gem "schema_to_scaffold"
 gem 'rename'
 gem 'meta-tags'
 gem 'url_formatter', git: "git://github.com/teixeir3/url_formatter.git"
-gem 'faker'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

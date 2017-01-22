@@ -59,7 +59,7 @@ class PermittedParams < Struct.new(:params, :current_user)
   end
   
   def contact_me_attributes
-    @contact_me_attributes ||= [:name, :phone, :email, :inquiry]
+    @contact_me_attributes ||= [:name, :phone, :email, :inquiry, :terms]
   end
   
 end
